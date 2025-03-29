@@ -11,8 +11,8 @@ class NumberBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.only(top: 30),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.only(top: 30),
+        decoration: const BoxDecoration(
           border: Border(
             top: BorderSide(color: Color.fromRGBO(10, 10, 10, 0.1)),
           ),
@@ -26,7 +26,7 @@ class NumberBox extends StatelessWidget {
                   ? Axis.vertical
                   : Axis.horizontal,
           crossAxisCount: 4,
-          children: <Widget>[
+          children: const <Widget>[
             CancelButton(),
             SignButton(value: '()'),
             SignButton(value: '%'),

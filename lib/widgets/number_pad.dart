@@ -8,7 +8,7 @@ class NumberPad extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 30, horizontal: 5),
       padding: EdgeInsets.symmetric(vertical: 40, horizontal: 0),
-      child: SizedBox(
+      child: const SizedBox(
         width: double.infinity,
         child: Text(
           'Number Pad',

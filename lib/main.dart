@@ -15,7 +15,7 @@ class CalculatorApp extends StatelessWidget {
       theme: lightThemeData,
       darkTheme: darkThemeData,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
