@@ -1,3 +1,4 @@
+import 'package:calculator_app/widgets/calculator_buttons/calculator_button.dart';
 import 'package:flutter/material.dart';
 
 class EqualToButton extends StatelessWidget {
@@ -5,16 +6,10 @@ class EqualToButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Theme.of(context).colorScheme.secondary,
-      ),
-      child: Text(
-        ' = ',
-        textAlign: TextAlign.center,
-        style: TextStyle(color: Theme.of(context).colorScheme.primary),
-      ),
+    return CalculatorButton(
+      value: '=',
+      buttonColor: Theme.of(context).colorScheme.secondary,
+      buttontextColor: Theme.of(context).colorScheme.primary,
     );
   }
 }

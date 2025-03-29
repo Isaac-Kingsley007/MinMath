@@ -9,33 +9,46 @@ class NumberBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.2,
-      height: MediaQuery.of(context).size.height * 0.6,
-      child: GridView.count(
-        crossAxisCount: 4,
-        children: <Widget>[
-          CancelButton(),
-          SignButton(value: '()'),
-          SignButton(value: '%'),
-          SignButton(value: '/'),
-          NumberButton(value: '7'),
-          NumberButton(value: '8'),
-          NumberButton(value: '9'),
-          SignButton(value: 'X'),
-          NumberButton(value: '4'),
-          NumberButton(value: '5'),
-          NumberButton(value: '6'),
-          SignButton(value: '-'),
-          NumberButton(value: '1'),
-          NumberButton(value: '2'),
-          NumberButton(value: '3'),
-          SignButton(value: '+'),
-          NumberButton(value: '+/-'),
-          NumberButton(value: '0'),
-          NumberButton(value: '.'),
-          EqualToButton(),
-        ],
+    return Expanded(
+      child: Container(
+        padding: EdgeInsets.only(top: 30),
+        decoration: BoxDecoration(
+          border: Border(
+            top: BorderSide(color: Color.fromRGBO(10, 10, 10, 0.1)),
+          ),
+        ),
+        child: GridView.count(
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          scrollDirection:
+              (MediaQuery.of(context).size.height >
+                      MediaQuery.of(context).size.width)
+                  ? Axis.vertical
+                  : Axis.horizontal,
+          crossAxisCount: 4,
+          children: <Widget>[
+            CancelButton(),
+            SignButton(value: '()'),
+            SignButton(value: '%'),
+            SignButton(value: '/'),
+            NumberButton(value: '7'),
+            NumberButton(value: '8'),
+            NumberButton(value: '9'),
+            SignButton(value: 'X'),
+            NumberButton(value: '4'),
+            NumberButton(value: '5'),
+            NumberButton(value: '6'),
+            SignButton(value: '-'),
+            NumberButton(value: '1'),
+            NumberButton(value: '2'),
+            NumberButton(value: '3'),
+            SignButton(value: '+'),
+            NumberButton(value: '+/-'),
+            NumberButton(value: '0'),
+            NumberButton(value: '.'),
+            EqualToButton(),
+          ],
+        ),
       ),
     );
   }

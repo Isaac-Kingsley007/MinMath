@@ -14,6 +14,7 @@ class CalculatorApp extends StatelessWidget {
     return MaterialApp(
       theme: lightThemeData,
       darkTheme: darkThemeData,
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }

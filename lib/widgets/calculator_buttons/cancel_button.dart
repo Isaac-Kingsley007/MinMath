@@ -1,3 +1,4 @@
+import 'package:calculator_app/widgets/calculator_buttons/calculator_button.dart';
 import 'package:flutter/material.dart';
 
 class CancelButton extends StatelessWidget {
@@ -5,16 +6,10 @@ class CancelButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Theme.of(context).colorScheme.primary,
-      ),
-      child: Text(
-        ' C ',
-        textAlign: TextAlign.center,
-        style: TextStyle(color: Theme.of(context).colorScheme.tertiary),
-      ),
+    return CalculatorButton(
+      value: 'C',
+      buttonColor: Theme.of(context).colorScheme.primary,
+      buttontextColor: Theme.of(context).colorScheme.tertiary,
     );
   }
 }
