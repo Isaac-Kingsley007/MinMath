@@ -1,4 +1,6 @@
+import 'package:calculator_app/models/calculator_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FunctionButtonsBox extends StatelessWidget {
   const FunctionButtonsBox({super.key});
@@ -9,23 +11,34 @@ class FunctionButtonsBox extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        spacing: 10,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.history),
-            iconSize: iconSize,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            spacing: 10,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.history),
+                iconSize: iconSize,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.scale_outlined),
+                iconSize: iconSize,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.calculate_outlined),
+                iconSize: iconSize,
+              ),
+            ],
           ),
           IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.scale_outlined),
+            onPressed: () => context.read<CalculatorProvider>().pop(),
+            icon: Icon(Icons.backspace_outlined),
             iconSize: iconSize,
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.calculate_outlined),
-            iconSize: iconSize,
+            color: Theme.of(context).colorScheme.secondary,
           ),
         ],
       ),

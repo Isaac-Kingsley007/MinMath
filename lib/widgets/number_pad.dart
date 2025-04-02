@@ -1,4 +1,6 @@
+import 'package:calculator_app/models/calculator_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class NumberPad extends StatelessWidget {
   const NumberPad({super.key});
@@ -6,14 +8,20 @@ class NumberPad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 30, horizontal: 5),
-      padding: EdgeInsets.symmetric(vertical: 40, horizontal: 0),
-      child: const SizedBox(
+      margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 5),
+      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 0),
+      child: SizedBox(
         width: double.infinity,
-        child: Text(
-          'Number Pad',
-          textAlign: TextAlign.right,
-          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+        child: Consumer<CalculatorProvider>(
+          builder:
+              (context, value, child) => Text(
+                value.expression,
+                textAlign: TextAlign.right,
+                style: const TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
         ),
       ),
     );

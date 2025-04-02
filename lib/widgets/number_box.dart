@@ -34,7 +34,7 @@ class NumberBox extends StatelessWidget {
             NumberButton(value: '7'),
             NumberButton(value: '8'),
             NumberButton(value: '9'),
-            SignButton(value: 'X'),
+            SignButton(value: '*'),
             NumberButton(value: '4'),
             NumberButton(value: '5'),
             NumberButton(value: '6'),

@@ -1,5 +1,7 @@
+import 'package:calculator_app/models/calculator_provider.dart';
 import 'package:calculator_app/widgets/calculator_buttons/calculator_button.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class NumberButton extends StatelessWidget {
   final String value;
@@ -11,6 +13,9 @@ class NumberButton extends StatelessWidget {
       value: value,
       buttonColor: Theme.of(context).colorScheme.primary,
       buttontextColor: Theme.of(context).colorScheme.inversePrimary,
+      onTap: () {
+        context.read<CalculatorProvider>().append(value);
+      },
     );
   }
 }
