@@ -26,7 +26,8 @@ String evaluateExpression(String expression) {
 class CalculatorProvider extends ChangeNotifier {
   String _expression = '';
   bool _answerCalculated = false;
-  final _operators = '*/+-';
+  final _operators = '*/+-()';
+  int _paranthesisBalancer = 0;
 
   String get expression => _expression;
 
@@ -48,6 +49,18 @@ class CalculatorProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  void appendParanthesis() {
+    if (_expression.isEmpty ||
+        _operators.contains(_expression[_expression.length - 1]) ||
+        _paranthesisBalancer == 0) {
+      append('(');
+      _paranthesisBalancer++;
+    } else {
+      append(')');
+      _paranthesisBalancer--;
+    }
+  }
+
   void clear() {
     _expression = '';
 
@@ -60,7 +73,6 @@ class CalculatorProvider extends ChangeNotifier {
 
     notifyListeners();
 
-    // _expression = '';
     _answerCalculated = true;
   }
 }

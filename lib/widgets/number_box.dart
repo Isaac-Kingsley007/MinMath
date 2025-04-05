@@ -1,6 +1,7 @@
 import 'package:calculator_app/widgets/calculator_buttons/cancel_button.dart';
 import 'package:calculator_app/widgets/calculator_buttons/equal_to_button.dart';
 import 'package:calculator_app/widgets/calculator_buttons/number_button.dart';
+import 'package:calculator_app/widgets/calculator_buttons/paranthesis_button.dart';
 import 'package:calculator_app/widgets/calculator_buttons/sign_button.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class NumberBox extends StatelessWidget {
           crossAxisCount: 4,
           children: const <Widget>[
             CancelButton(),
-            SignButton(value: '()'),
+            ParanthesisButton(),
             SignButton(value: '%'),
             SignButton(value: '/'),
             NumberButton(value: '7'),
