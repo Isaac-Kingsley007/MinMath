@@ -21,11 +21,6 @@ class NumberBox extends StatelessWidget {
         child: GridView.count(
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
-          scrollDirection:
-              (MediaQuery.of(context).size.height >
-                      MediaQuery.of(context).size.width)
-                  ? Axis.vertical
-                  : Axis.horizontal,
           crossAxisCount: 4,
           children: const <Widget>[
             CancelButton(),

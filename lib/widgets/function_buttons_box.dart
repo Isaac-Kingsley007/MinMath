@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 class FunctionButtonsBox extends StatelessWidget {
   const FunctionButtonsBox({super.key});
-  final iconSize = 30.0;
+  final iconSize = 25.0;
 
   @override
   Widget build(BuildContext context) {

@@ -18,6 +18,8 @@ String evaluateExpression(String expression) {
 
   String resultString = result.toString();
 
+  if (result == result.toInt()) return result.toInt().toString();
+
   return (resultString.length <= precision)
       ? resultString
       : result.toStringAsPrecision(precision);
@@ -26,7 +28,7 @@ String evaluateExpression(String expression) {
 class CalculatorProvider extends ChangeNotifier {
   String _expression = '';
   bool _answerCalculated = false;
-  final _operators = '*/+-()';
+  final _operators = '*/+-()%';
   int _paranthesisBalancer = 0;
 
   String get expression => _expression;
@@ -38,12 +40,22 @@ class CalculatorProvider extends ChangeNotifier {
       }
       _answerCalculated = false;
     }
+
+    if (_operators.contains(char) &&
+        (_expression == '' ||
+            _operators.contains(_expression[_expression.length - 1]))) {
+      return;
+    }
     _expression += char;
 
     notifyListeners();
   }
 
   void pop() {
+    if (_expression == 'Error') {
+      clear();
+      return;
+    }
     _expression = _expression.substring(0, _expression.length - 1);
 
     notifyListeners();
