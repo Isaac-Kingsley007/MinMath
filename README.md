@@ -1,16 +1,24 @@
-# calculator_app
+# MinMath
 
-A new Flutter project.
+A **Minimalistic Calculator App** built using [Flutter](https://flutter.dev/). 
+Inspired by the simplicity and elegance of the Samsung Calculator.
 
-## Getting Started
+## 📅 Features
 
-This project is a starting point for a Flutter application.
+- Clean, simple, and distraction-free UI
+- Basic arithmetic operations: `+`, `-`, `×`, `÷`, `%`, `+/-`
+- Parenthesis handling
+- Clear (C) and Equals (=) functionality
+- Fully responsive layout with grid-based buttons
 
-A few resources to get you started if this is your first Flutter project:
+## 🎓 Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**: Frontend and UI rendering
+- **Dart**: App logic and component structure
+- **Material Design**: Default Flutter design components
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+Made with ❤️ using Flutter.
+
+Feel free to contribute or suggest improvements!
