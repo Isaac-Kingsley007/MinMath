@@ -5,13 +5,12 @@ Inspired by the simplicity and elegance of the Samsung Calculator.
 
 ## 📅 Features
 
-- Clean, simple, and distraction-free UI
+- Clean, simple, and distraction-free UI Inspired from Samsung
+- Cross Platform Support - Android, IOS and Web
 - Basic arithmetic operations: `+`, `-`, `×`, `÷`, `%`, `+/-`
-- Parenthesis handling
-- Clear (C) and Equals (=) functionality
 - Fully responsive layout with grid-based buttons
 
-## 🎓 Tech Stack
+## 🛠️ Tech Stack
 
 - **Flutter**: Frontend and UI rendering
 - **Dart**: App logic and component structure
